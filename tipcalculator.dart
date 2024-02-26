@@ -8,4 +8,8 @@ void main() {
   int? tip = int.parse(stdin.readLineSync()!);
   print("how many people to split the bill?");
   int? totalNumberOfPeople = int.parse(stdin.readLineSync()!);
+  var calculator = (totalBill * (tip / 100) + totalBill);
+  print("total bill is  $calculator");
+  var individualPay = calculator / totalNumberOfPeople;
+  print("each person should pay $individualPay");
 }
